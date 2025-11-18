@@ -21,6 +21,13 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from django.views.decorators.csrf import csrf_exempt
 
+openapi_tags = [
+    {"name": "health", "description": "Service health"},
+    {"name": "products", "description": "Product catalog"},
+    {"name": "cart", "description": "Shopping cart operations"},
+    {"name": "orders", "description": "Order and checkout"},
+]
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
